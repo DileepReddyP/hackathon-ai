@@ -69,7 +69,7 @@ function getMousePos(canvas, e) {
 }
 
 export default function NumberClassify() {
-	const [label, setLabel] = useState('idk')
+	const [label, setLabel] = useState('')
 	const canvasRef = useRef(null)
 	async function classifyCanvas() {
 		console.log('here')

@@ -31,8 +31,9 @@ const NextPage = () => (
 								same data, it will give you the same solution every time.
 							</li>
 							<li className='list-group-item'>
-								A <strong>magic solution</strong> to any problem Artificial
-								intelligence can’t grade your essay
+								Artificial intelligence is also <strong>not</strong> a magic
+								solution to any problem. For example, artificial intelligence
+								can’t grade your essay (yet).
 							</li>
 						</ul>
 					</div>
@@ -49,13 +50,12 @@ const NextPage = () => (
 							<li className='list-group-item'>
 								In artificial intelligence, we use answers to give us rules!
 							</li>
-							<li className='list-group-item'>
+							<li className='list-group-item active'>
 								This is like when your parents give you advice. You remember
 								each thing they tell you.
 							</li>
 						</ul>
 					</div>
-					And <strong>why</strong> do we even need it to be beginning with
 					<div className='jumbotron py-3 text-left'>
 						<ul className='list-group'>
 							<li className='list-group-item'>
