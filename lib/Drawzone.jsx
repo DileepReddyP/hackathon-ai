@@ -7,7 +7,7 @@ ml5 Example
 SketchRNN
 === */
 
-import Script from 'next/script';
+import Head from 'next/head';
 import { useRef, useEffect, useState } from 'react';
 
 // The SketchRNN model
