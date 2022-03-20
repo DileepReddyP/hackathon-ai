@@ -10,12 +10,12 @@ const NextPage = () => (
 		<Header></Header>
 		<Body body={<h1>Hello World</h1>}></Body>
 		<Link href='/'>
-			<a className='badge badge-primary float-left ml-3 position-fixed'>
+			<a className='badge badge-primary float-left mx-5 px-5 py-3'>
 				<ArrowLeftIcon size={24}></ArrowLeftIcon>
 			</a>
 		</Link>
 		<Link href='/lastpage'>
-			<a className='badge badge-primary float-right mr-3 sticky-bottom'>
+			<a className='badge badge-primary float-right mx-5 px-5 py-3'>
 				<ArrowRightIcon size={24}></ArrowRightIcon>
 			</a>
 		</Link>

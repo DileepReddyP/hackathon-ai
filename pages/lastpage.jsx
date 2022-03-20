@@ -12,7 +12,7 @@ export default function LastPage() {
 			<Header></Header>
 			<Body model={<NumberClassify />}></Body>
 			<Link href='/nextpage'>
-				<a className='badge badge-primary float-left ml-3 sticky-bottom'>
+				<a className='badge badge-primary float-left mx-5 px-5 py-3'>
 					<ArrowLeftIcon size={24}></ArrowLeftIcon>
 				</a>
 			</Link>

@@ -12,7 +12,7 @@ export default function Home() {
 			<Header></Header>
 			<Body model={<Drawzone />} body='Get to know'></Body>
 			<Link href='/nextpage'>
-				<a className='badge badge-primary float-right mx-2'>
+				<a className='badge badge-primary float-right mx-5 px-5 py-3'>
 					<ArrowRightIcon size={24}></ArrowRightIcon>
 				</a>
 			</Link>
