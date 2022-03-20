@@ -25,7 +25,7 @@ function QuestionTwo() {
 	return (
 		<div>
 			<p>Our numbers need to be in boxes with the same size,</p>
-			<p>and We&apos;re going to use a 28 x 28 box for the numbers</p>
+			<p>and we&apos;re going to use a 28 x 28 box for the numbers</p>
 
 			<form>
 				{/* <!-- Asks the height and width of the draw box --> */}

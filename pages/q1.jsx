@@ -24,7 +24,7 @@ function QuestionOne() {
 	}
 	return (
 		<div>
-			<p>Let&apos;s make the computer read numbers</p>
+			<h4>Let&apos;s make the computer read numbers</h4>
 			<form>
 				<label htmlFor='digits'>First, how many digits are there?</label>
 				<br />
