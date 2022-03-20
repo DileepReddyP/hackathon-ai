@@ -10,7 +10,7 @@ function QuestionOne() {
     const [value, setValue] = useState(null);
     const [correct, setCorrect] = useState(null);
     const checkCorrect = () => {
-        if (value === 10) {
+        if (parseInt(value) === 10) {
             console.log("here")
             setCorrect(true);
             confetti({
@@ -28,7 +28,7 @@ function QuestionOne() {
             <form>
                 <label htmlFor="digits">First, how many digits are there? (Hint: count your fingers!)</label><br />
                 <p>{correct === null ? '' : correct ? <h1>Correct</h1> : <h1>{"Wrong :("}</h1>}</p>
-                <input value={value} onChange={(e) => setValue(parseInt(e.target.value))} type="text" id="digits" name="digits" /><br />
+                <input value={value} onChange={(e) => setValue(e.target.value)} type="text" id="digits" name="digits" /><br />
                 <p></p>
             </form>
             <button type='button' onClick={checkCorrect}>Check my Answer!</button>

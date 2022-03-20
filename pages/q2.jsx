@@ -11,7 +11,7 @@ function QuestionTwo() {
     const [width, setWidth] = useState(null);
     const [correct, setCorrect] = useState(null);
     const checkCorrect = () => {
-        if (height === 28 && width === 28) {
+        if (parseInt(height) === 28 && parseInt(width) === 28) {
             setCorrect(true);
             confetti({
                 particleCount: 100,
@@ -31,11 +31,11 @@ function QuestionTwo() {
                 {/* <!-- Asks the height and width of the draw box --> */}
                 <label htmlFor="height">Can you tell the computer how tall the box will be? </label><br />
                 <p></p>
-                <input value={height} onChange={(e) => setHeight(parseInt(e.target.value))} type="text" id="height" name="height" /><br />
+                <input value={height} onChange={(e) => setHeight(e.target.value)} type="text" id="height" name="height" /><br />
                 <p></p>
                 <label htmlFor="width">Then can you tell the computer how wide the box will be? </label><br />
                 <p></p>
-                <input value={width} onChange={(e) => setWidth(parseInt(e.target.value))} type="text" id="width" name="width" /><br />
+                <input value={width} onChange={(e) => setWidth(e.target.value)} type="text" id="width" name="width" /><br />
             </form>
             <p>{correct === null ? '' : correct ? <h1>Correct</h1> : <h1>{"Wrong :("}</h1>}</p>
             <button type='button' onClick={checkCorrect}>Check my Answer!</button>
