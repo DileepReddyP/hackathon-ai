@@ -8,6 +8,8 @@ SketchRNN
 === */
 
 import { useRef, useEffect, useState } from 'react'
+import models from '../lib/models'
+import Body from '../src/components/Body'
 
 // The SketchRNN model
 let model
@@ -31,13 +33,13 @@ const height = 480
 let canvas, ctx
 let mouseDown = false
 let currentModel = 'cat'
-async function setup() {
+async function setup(modelObj) {
 	ctx = canvas.getContext('2d')
 	ctx.fillStyle = '#ebedef'
 	ctx.fillRect(0, 0, width, height)
 	// Load the model
 	// See a list of all supported models: https://github.com/ml5js/ml5-library/blob/master/src/SketchRNN/models.js
-	model = await ml5.sketchRNN(currentModel, modelReady)
+	model = await ml5.sketchRNN(modelObj, modelReady)
 
 	requestAnimationFrame(draw)
 }
@@ -154,7 +156,7 @@ function getMousePos(canvas, e) {
 	}
 }
 
-export default function Drawzone() {
+function Drawzone(props) {
 	const canvasRef = useRef(null)
 	/* ===
        ml5 Example
@@ -168,7 +170,7 @@ export default function Drawzone() {
 		// https://opensource.org/licenses/MIT
 		canvas = canvasRef.current
 		ctx = canvas.getContext('2d')
-		setup()
+		setup(props.modelObj)
 
 		// The model is ready
 	})
@@ -176,7 +178,7 @@ export default function Drawzone() {
 		<div className='card text-center'>
 			{/* needs a description of AI to attract kids here */}
 			<div className='card-header'>
-				<h1>Start drawing a cat!</h1>
+				<h1>Start drawing a {props.modelObj}!</h1>
 			</div>
 			<div className='card-body'>
 				<canvas
@@ -198,5 +200,42 @@ export default function Drawzone() {
 				</button>
 			</div>
 		</div>
+	)
+}
+
+export default function DrawzonePopulate() {
+	const [modelObj, setModelObj] = useState('cat')
+
+	return (
+		<>
+			<div className='container text-center'>
+				<form className='form-inline'>
+					<label className='mr-3'>What do you want to draw</label>
+					<div className='form-row align-items-center'>
+						<div className='col-auto my-1'>
+							<label
+								className='mr-sm-2 sr-only'
+								htmlFor='inlineFormCustomSelect'
+							>
+								ModelObject
+							</label>
+							<select
+								className='custom-select mr-sm-2'
+								id='inlineFormCustomSelect'
+								onChange={(e) => setModelObj(e.target.value)}
+							>
+								<option selected>Choose...</option>
+								{models.map((model) => (
+									<option key={model} value={model}>
+										{model}
+									</option>
+								))}
+							</select>
+						</div>
+					</div>
+				</form>
+			</div>
+			<Body model={<Drawzone modelObj={modelObj} />}></Body>
+		</>
 	)
 }

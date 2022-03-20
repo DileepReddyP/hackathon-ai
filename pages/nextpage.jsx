@@ -15,7 +15,7 @@ const NextPage = () => (
 			</a>
 		</Link>
 		<Link href='/q1'>
-			<a className='badge badge-primary float-right mr-3 sticky-bottom'>
+			<a className='badge badge-primary float-right mx-5 px-5 py-3'>
 				<ArrowRightIcon size={24}></ArrowRightIcon>
 			</a>
 		</Link>
