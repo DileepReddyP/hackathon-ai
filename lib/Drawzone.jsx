@@ -7,8 +7,7 @@ ml5 Example
 SketchRNN
 === */
 
-import Script from 'next/script';
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react'
 
 // The SketchRNN model
 let model
@@ -175,12 +174,6 @@ export default function Drawzone() {
 	})
 	return (
 		<div className='card text-center'>
-			<Head>
-				<script
-					defer
-					src='https://unpkg.com/ml5@latest/dist/ml5.min.js'
-				></script>
-			</Head>
 			<div className='card-header'>
 				<h1>Start drawing a cat!</h1>
 			</div>
@@ -196,7 +189,7 @@ export default function Drawzone() {
 			</div>
 			<div className='card-footer'>
 				<button
-					className='btn btn-primary'
+					className='btn btn-primary l-2'
 					onClick={clearDrawing}
 					type='button'
 				>
