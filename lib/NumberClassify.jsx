@@ -73,7 +73,7 @@ export default function NumberClassify() {
 	const canvasRef = useRef(null)
 	async function classifyCanvas() {
 		console.log('here')
-		const image = await tf.browser
+		const image = tf.browser
 			.fromPixels(canvas, 1)
 			.resizeNearestNeighbor([28, 28], true)
 		// const imageData = ctx.getImageData(0, 0, width, height)
@@ -81,7 +81,7 @@ export default function NumberClassify() {
 		// const rgbaTens3d = tf.tensor3d(uint8array, [canvas.height, canvas.width, 4])
 		// const rgbTens3d = tf.slice3d(rgbaTens3d, [0, 0, 0], [-1, -1, 1]) // strip alpha channel
 		// const smallImg = tf.image.resizeBilinear(rgbTens3d, [28, 28]); // 192,192 is dictated by my model
-		const stack = await tf.stack([image])
+		const stack = tf.stack([image])
 		let op = model.predict(stack).dataSync()
 		op = Array.from(op)
 		let indexOfMaxValue = op.reduce(
