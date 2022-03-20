@@ -3,7 +3,7 @@ import Head from 'next/head'
 function Setup() {
 	return (
 		<Head>
-			<title>HackGSU X Project</title>
+			<title>Learn AI!</title>
 			<meta name='description' content='Hackathon Project' />
 			<meta name='viewport' content='initial-scale=1.0, width=device-width' />
 			<link

@@ -14,8 +14,8 @@ const NextPage = () => (
 				<ArrowLeftIcon size={24}></ArrowLeftIcon>
 			</a>
 		</Link>
-		<Link href='/lastpage'>
-			<a className='badge badge-primary float-right mx-5 px-5 py-3'>
+		<Link href='/q1'>
+			<a className='badge badge-primary float-right mr-3 sticky-bottom'>
 				<ArrowRightIcon size={24}></ArrowRightIcon>
 			</a>
 		</Link>
