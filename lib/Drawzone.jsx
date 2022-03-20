@@ -7,7 +7,7 @@ ml5 Example
 SketchRNN
 === */
 
-import Head from 'next/head';
+import Script from 'next/script';
 import { useRef, useEffect, useState } from 'react';
 
 
@@ -178,9 +178,7 @@ export default function Drawzone() {
     });
     return (
         <div>
-            <Head>
-                <script defer src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
-            </Head>
+            <Script src="https://unpkg.com/ml5@latest/dist/ml5.min.js" strategy='beforeInteractive'></Script>
             <h1>Start drawing a cat!</h1>
             <canvas onMouseUp={onMouseUp} onMouseDown={onMouseDown} onMouseMove={onMouseUpdate} ref={canvasRef} height={640} width={480}></canvas>
             <button onClick={clearDrawing} type='button'>Clear</button>
