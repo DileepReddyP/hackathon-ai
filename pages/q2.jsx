@@ -1,26 +1,3 @@
-function QuestionTwo () {
-    return (
-        <div>
-            <p>Our numbers need to be in boxes with the same size,</p>
-            <p>and We&apos;re going to use a 28 x 28 box for the numbers</p>
-
-            <form> 
-                {/* <!-- Asks the height and width of the draw box --> */}
-                <label htmlFor="height">Can you tell the computer how tall the box will be? </label><br/>
-                <p></p>
-                <input type="text" id="height" name="height"/><br/>
-                <p></p>
-                <label htmlFor="width">Then can you tell the computer how wide the box will be? </label><br/>
-                <p></p>
-                <input type="text" id="width" name="width"/><br/>
-
-                <input type="submit" value="Submit"/>    
-            </form>
-        </div>
-    )
-}
-
-
 import Link from 'next/link'
 import Header from '../src/components/Header'
 import Setup from '../src/components/Setup'
@@ -29,13 +6,12 @@ import Body from '../src/components/Body'
 import { useState } from 'react'
 import confetti from 'canvas-confetti'
 
-function QuestionOne() {
-    const [value, setValue] = useState(null);
+function QuestionTwo() {
+    const [height, setHeight] = useState(null);
+    const [width, setWidth] = useState(null);
     const [correct, setCorrect] = useState(null);
     const checkCorrect = () => {
-        console.log(value)
-        if (value === 10) {
-            console.log("here")
+        if (height === 28 && width === 28) {
             setCorrect(true);
             confetti({
                 particleCount: 100,
@@ -48,18 +24,25 @@ function QuestionOne() {
     }
     return (
         <div>
-            <p>Let&apos;s make the computer read numbers</p>
+            <p>Our numbers need to be in boxes with the same size,</p>
+            <p>and We&apos;re going to use a 28 x 28 box for the numbers</p>
+
             <form>
-                <label htmlFor="digits">First, how many digits are there? (Hint: count your fingers!)</label><br />
-                <p>{correct === null ? '' : correct ? <h1>Correct</h1> : <h1>{"Wrong :("}</h1>}</p>
-                <input value={value} onChange={(e) => setValue(parseInt(e.target.value))} type="text" id="digits" name="digits" /><br />
+                {/* <!-- Asks the height and width of the draw box --> */}
+                <label htmlFor="height">Can you tell the computer how tall the box will be? </label><br />
                 <p></p>
+                <input value={height} onChange={(e) => setHeight(parseInt(e.target.value))} type="text" id="height" name="height" /><br />
+                <p></p>
+                <label htmlFor="width">Then can you tell the computer how wide the box will be? </label><br />
+                <p></p>
+                <input value={width} onChange={(e) => setWidth(parseInt(e.target.value))} type="text" id="width" name="width" /><br />
             </form>
+            <p>{correct === null ? '' : correct ? <h1>Correct</h1> : <h1>{"Wrong :("}</h1>}</p>
             <button type='button' onClick={checkCorrect}>Check my Answer!</button>
             {correct ?
-                <Link href='/q2'>
+                <Link href='/finalmodel'>
                     <a>
-                        <button type='button'>See the AI in action!</button>
+                        <button type='button'>See the Model!</button>
                     </a>
                 </Link>
                 : ''}

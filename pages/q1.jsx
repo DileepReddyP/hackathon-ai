@@ -10,7 +10,6 @@ function QuestionOne() {
     const [value, setValue] = useState(null);
     const [correct, setCorrect] = useState(null);
     const checkCorrect = () => {
-        console.log(value)
         if (value === 10) {
             console.log("here")
             setCorrect(true);

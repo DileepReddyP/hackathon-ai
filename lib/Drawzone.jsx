@@ -174,6 +174,7 @@ export default function Drawzone() {
 	})
 	return (
 		<div className='card text-center'>
+			{/* needs a description of AI to attract kids here */}
 			<div className='card-header'>
 				<h1>Start drawing a cat!</h1>
 			</div>
