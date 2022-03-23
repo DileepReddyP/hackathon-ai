@@ -5,6 +5,7 @@ import { ArrowRightIcon, ArrowLeftIcon } from '@primer/octicons-react'
 import Body from '../src/components/Body'
 import Image from 'next/image'
 import aidefi from '../assets/img/What-is-artificial-intelligence.png'
+import number9 from '../assets/img/9.png'
 
 const NextPage = () => (
 	<div>
@@ -77,8 +78,8 @@ const NextPage = () => (
 							</li>
 						</ul>
 					</div>
-					Ok that’s cool and all, but do you wonder <strong>how</strong> does it
-					work?
+					Ok that’s cool and all, but do you wonder <strong>how</strong> it
+					works?
 					<div className='jumbotron py-3 text-left'>
 						<ul className='list-group'>
 							<li className='list-group-item'>
@@ -96,6 +97,56 @@ const NextPage = () => (
 								After thousands of pieces of data like this, the computer can
 								use math to understand what parts of each data piece is
 								important and what it indicates
+							</li>
+						</ul>
+					</div>
+					<div className='jumbotron py-3'>
+						<h3>The number 9</h3>
+						<Image src={number9} alt='The 9 digit' />
+					</div>
+					<div className='jumbotron py-3 text-left'>
+						<h3>For example... let's say we're trying to recognize a handwritten number.</h3>
+						<ul className='list-group'>
+							<li className='list-group-item'>
+								The number 9 has a circle and a vertical line in it.
+							</li>
+							<li className='list-group-item'>
+								Lots of numbers have circles and lines, like 0, 8, 1, 4, and 6
+							</li>
+							<li className='list-group-item active'>
+							After seeing thousands of 9’s and doing lots of “guess and check” 
+							repetitively really fast according to a formula with all the numbers, 
+							the computer eventually learns that a 9 has a vertical line and a 
+							circle touching the line in the upper part on the left side!
+							</li>
+						</ul>
+					</div>
+					<div className='jumbotron py-3 text-left'>
+						<h3>Wow! Now computers can read handwritten numbers!</h3>
+						<ul className='list-group'>
+							<li className='list-group-item'>
+								We can take this idea and apply it to video and sound too! Every 
+								lyric, every melody, every pixel has something to say to the computer!
+							</li>
+							<li className='list-group-item'>
+								We can teach a computer to recognize anything if we have enough 
+								training data for it!
+							</li>
+							<li className='list-group-item'>
+								It all comes down to learning the 'rules' of how to recognize the 
+								things we're interested in.
+							</li>
+						</ul>
+					</div>
+					BUT WAIT! What is this “guess and check” formula? How does it work?
+					<div className='jumbotron py-3 text-left'>
+						<ul className='list-group'>
+							<li className='list-group-item'>
+								That’s a question you’ll get to answer in college. It’s a little too advanced for you!
+							</li>
+							<li className='list-group-item'>
+								But if you think you can take a crack at understanding it, start learning 
+								a subject of math called <strong>linear algebra</strong>
 							</li>
 						</ul>
 					</div>
