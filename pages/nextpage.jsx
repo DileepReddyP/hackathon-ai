@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import Header from '../src/components/Header'
 import Setup from '../src/components/Setup'
-import { ArrowRightIcon, ArrowLeftIcon } from '@primer/octicons-react'
+import { ArrowRightIcon, ArrowLeftIcon } from '@primer/octicons-react' 
 import Body from '../src/components/Body'
 import Image from 'next/image'
 import aidefi from '../assets/img/What-is-artificial-intelligence.png'
-import number9 from '../assets/img/9.png'
+import number9 from '../assets/img/nine.png'
 
 const NextPage = () => (
 	<div>
