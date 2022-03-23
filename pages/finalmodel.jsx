@@ -16,6 +16,11 @@ export default function LastPage() {
 					<ArrowLeftIcon size={24}></ArrowLeftIcon>
 				</a>
 			</Link>
+			<Link href='/lastpage'>
+			<a className='badge badge-primary float-right mx-5 px-5 py-3'>
+				<ArrowRightIcon size={24}></ArrowRightIcon>
+			</a>
+			</Link>
 		</>
 	)
 }
