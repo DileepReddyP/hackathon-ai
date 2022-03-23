@@ -4,7 +4,7 @@ import Setup from '../src/components/Setup'
 import { ArrowRightIcon, ArrowLeftIcon } from '@primer/octicons-react'
 import Body from '../src/components/Body'
 
-const NextPage = () => (
+const LastPage = () => (
 	<div>
 		<Setup></Setup>
 		<Header></Header>
@@ -54,10 +54,4 @@ const NextPage = () => (
             ></Body>
     </div>
 )
-export default function LastPage() {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+export default LastPage;
