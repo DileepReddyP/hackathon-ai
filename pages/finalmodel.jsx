@@ -3,7 +3,7 @@ import Body from '../src/components/Body'
 import Header from '../src/components/Header'
 import Setup from '../src/components/Setup'
 import Link from 'next/link'
-import { ArrowRightIcon, ArrowLeftIcon } from '@primer/octicons-react'
+import { ArrowLeftIcon, ArrowRightIcon } from '@primer/octicons-react'
 
 export default function LastPage() {
 	return (

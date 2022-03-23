@@ -4,8 +4,9 @@ import Setup from '../src/components/Setup'
 import { ArrowRightIcon, ArrowLeftIcon } from '@primer/octicons-react'
 import Body from '../src/components/Body'
 
-const NextPage = () => (
-	<div>
+export default function LastPage() {
+	return (
+		<>
 		<Setup></Setup>
 		<Header></Header>
 		<Body
@@ -22,11 +23,13 @@ const NextPage = () => (
 							<li className='list-group-item'>
                                 But it can’t…
                             </li>
+                            <li className='list-group-item'>
                             <ul>
                                 <li>Improve itself</li>
                                 <li>Do something other than what the math tells it to</li>
                                 <li>Suddenly gain free will like in I, Robot (Asimov, 1950)</li>
                             </ul> 
+                            </li>
 						</ul>
 				    </div>
                     <div className='jumbotron py-3 text-left'>
@@ -52,12 +55,6 @@ const NextPage = () => (
                 </div>
             }
             ></Body>
-    </div>
-)
-export default function LastPage() {
-    return (
-        <div>
-            
-        </div>
+        </>
     )
-}
+    }
