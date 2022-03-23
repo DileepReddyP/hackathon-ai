@@ -105,7 +105,7 @@ const NextPage = () => (
 						<Image src={number9} alt='The 9 digit' />
 					</div>
 					<div className='jumbotron py-3 text-left'>
-						<h3>For example... let's say we're trying to recognize a handwritten number.</h3>
+						<h3>For example... let&apos;s say we&apos;re trying to recognize a handwritten number.</h3>
 						<ul className='list-group'>
 							<li className='list-group-item'>
 								The number 9 has a circle and a vertical line in it.
@@ -133,8 +133,8 @@ const NextPage = () => (
 								training data for it!
 							</li>
 							<li className='list-group-item'>
-								It all comes down to learning the 'rules' of how to recognize the 
-								things we're interested in.
+								It all comes down to learning the &apos;rules&apos; of how to recognize the 
+								things we&apos;re interested in.
 							</li>
 						</ul>
 					</div>
@@ -142,7 +142,7 @@ const NextPage = () => (
 					<div className='jumbotron py-3 text-left'>
 						<ul className='list-group'>
 							<li className='list-group-item'>
-								That’s a question you’ll get to answer in college. It’s a little too advanced for you!
+								That&apos;s a question you&apos;ll get to answer in college. It&apos;s a little too advanced for you!
 							</li>
 							<li className='list-group-item'>
 								But if you think you can take a crack at understanding it, start learning 
