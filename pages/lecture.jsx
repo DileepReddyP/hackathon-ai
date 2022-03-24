@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Header from '../src/components/Header'
 import Setup from '../src/components/Setup'
-import { ArrowRightIcon, ArrowLeftIcon } from '@primer/octicons-react' 
+import { ArrowRightIcon, ArrowLeftIcon } from '@primer/octicons-react'
 import Body from '../src/components/Body'
 import Image from 'next/image'
 import aidefi from '../assets/img/What-is-artificial-intelligence.png'
@@ -105,7 +105,10 @@ const NextPage = () => (
 						<Image src={number9} alt='The 9 digit' />
 					</div>
 					<div className='jumbotron py-3 text-left'>
-						<h3>For example... let&apos;s say we&apos;re trying to recognize a handwritten number.</h3>
+						<h3>
+							For example... let&apos;s say we&apos;re trying to recognize a
+							handwritten number.
+						</h3>
 						<ul className='list-group'>
 							<li className='list-group-item'>
 								The number 9 has a circle and a vertical line in it.
@@ -114,10 +117,11 @@ const NextPage = () => (
 								Lots of numbers have circles and lines, like 0, 8, 1, 4, and 6
 							</li>
 							<li className='list-group-item active'>
-							After seeing thousands of 9’s and doing lots of “guess and check” 
-							repetitively really fast according to a formula with all the numbers, 
-							the computer eventually learns that a 9 has a vertical line and a 
-							circle touching the line in the upper part on the left side!
+								After seeing thousands of 9’s and doing lots of “guess and
+								check” repetitively really fast according to a formula with all
+								the numbers, the computer eventually learns that a 9 has a
+								vertical line and a circle touching the line in the upper part
+								on the left side!
 							</li>
 						</ul>
 					</div>
@@ -125,16 +129,17 @@ const NextPage = () => (
 						<h3>Wow! Now computers can read handwritten numbers!</h3>
 						<ul className='list-group'>
 							<li className='list-group-item'>
-								We can take this idea and apply it to video and sound too! Every 
-								lyric, every melody, every pixel has something to say to the computer!
+								We can take this idea and apply it to video and sound too! Every
+								lyric, every melody, every pixel has something to say to the
+								computer!
 							</li>
 							<li className='list-group-item'>
-								We can teach a computer to recognize anything if we have enough 
+								We can teach a computer to recognize anything if we have enough
 								training data for it!
 							</li>
 							<li className='list-group-item'>
-								It all comes down to learning the &apos;rules&apos; of how to recognize the 
-								things we&apos;re interested in.
+								It all comes down to learning the &apos;rules&apos; of how to
+								recognize the things we&apos;re interested in.
 							</li>
 						</ul>
 					</div>
@@ -142,27 +147,40 @@ const NextPage = () => (
 					<div className='jumbotron py-3 text-left'>
 						<ul className='list-group'>
 							<li className='list-group-item'>
-								That&apos;s a question you&apos;ll get to answer in college. It&apos;s a little too advanced for you!
+								That&apos;s a question you&apos;ll get to answer in college.
+								It&apos;s a little too advanced for you!
 							</li>
 							<li className='list-group-item'>
-								But if you think you can take a crack at understanding it, start learning 
-								a subject of math called <strong>linear algebra</strong>
+								But if you think you can take a crack at understanding it, start
+								learning a subject of math called{' '}
+								<strong>linear algebra</strong>
 							</li>
 						</ul>
 					</div>
 				</div>
 			}
 		></Body>
-		<Link href='/'>
-			<a className='badge badge-primary float-left mx-5 px-5 py-3'>
-				<ArrowLeftIcon size={24}></ArrowLeftIcon>
-			</a>
-		</Link>
-		<Link href='/q1'>
-			<a className='badge badge-primary float-right mx-5 px-5 py-3'>
-				<ArrowRightIcon size={24}></ArrowRightIcon>
-			</a>
-		</Link>
+		<div
+			className='mx-auto link-container'
+			style={{
+				margin: '10px',
+				width: '20vw',
+				display: 'flex',
+				justifyContent: 'space-around',
+				alignContent: 'center'
+			}}
+		>
+			<Link href='/'>
+				<a className='badge badge-primary float-left mx-5 px-5 py-3'>
+					<ArrowLeftIcon size={24}></ArrowLeftIcon>
+				</a>
+			</Link>
+			<Link href='/q1'>
+				<a className='badge badge-primary float-right mx-5 px-5 py-3'>
+					<ArrowRightIcon size={24}></ArrowRightIcon>
+				</a>
+			</Link>
+		</div>
 	</div>
 )
 export default NextPage
